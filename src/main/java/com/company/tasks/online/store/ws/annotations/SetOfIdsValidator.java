@@ -11,7 +11,7 @@ public class SetOfIdsValidator implements ConstraintValidator<SetOfIdsValidation
     @Override
     public boolean isValid(Set<Integer> ids, ConstraintValidatorContext constraintValidatorContext) {
         for (Integer id : ids) {
-            if (isNull(id) || id < 0) {
+            if (isNull(id) || id <= 0) {
                 return false;
             }
         }
